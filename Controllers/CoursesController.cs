@@ -15,12 +15,12 @@ namespace WebApp.Controllers
 
         public IActionResult Detail(string id)
         {
-            return Content($"Sono Detail con codice {id}");
+            return View();
         }
 
         public IActionResult Search(string title)
         {
-            return Content($"Hai cercato {title}");
+            return View();
         }
     }
 }
