@@ -1,0 +1,22 @@
+h1
+{
+    font-size: calc(1.7rem + 1.5vw);
+}
+
+.course
+{
+    margin: 1.3rem 0;
+}
+
+.rating
+{
+    color:orange;
+    white-space: nowrap;
+}
+
+.price s
+{
+    color:#aaa;
+    font-size: 0.65rem;
+    
+}
