@@ -2,5 +2,14 @@
     "emmet.includeLanguages": {
         "aspnetcorerazor": "html",
         "razor": "html"
-    }
+    },
+     // Font Awesome version to use.
+     "fontAwesomeAutocomplete.version": "6",
+     // List of glob patterns that determine where Font Awesome 5 Autocomplete will provide suggestions.
+     "fontAwesomeAutocomplete.patterns": [
+         "**/*.cshtml"
+     ],
+     // A word that triggers the autocompletion of Font Awesome icons. Last character of the trigger word is also the trigger character for autocompletion menu.
+     "fontAwesomeAutocomplete.triggerWord": "f-",
+   
 }
