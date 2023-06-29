@@ -10,7 +10,7 @@ namespace WebApp.Controllers
     {
         public IActionResult Index()
         {
-            return Content("Sono l'index");
+            return View();
         }
 
         public IActionResult Detail(string id)
