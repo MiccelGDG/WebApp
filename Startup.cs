@@ -54,9 +54,11 @@ namespace WebApp
 
             //app.UseMvcWithDefaultRoute();
 
+            //Gestione EndPoints da AspNet 3
+            //Template di default
             app.UseEndpoints(endpoints => 
             {
-                endpoints.MapControllerRoute("default", "{controller}/{action}/{id}");
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
 
 
