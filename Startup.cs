@@ -16,6 +16,8 @@ namespace WebApp
 
             //Logging   
 
+            services.AddMvc();
+
             services.AddLogging(loggingBuilder =>
             {
                 loggingBuilder.ClearProviders();
@@ -49,14 +51,15 @@ namespace WebApp
             //MiddleWare per l'utilizzo dei file statici
             app.UseStaticFiles();
 
-            app.UseEndpoints(endpoints =>
+
+            //app.UseMvcWithDefaultRoute();
+
+            app.UseEndpoints(endpoints => 
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    string nome = context.Request.Query["nome"].ToString() ?? "";
-                    await context.Response.WriteAsync($"Ciao {nome.ToUpper()}");
-                });
+                endpoints.MapControllerRoute("default", "{controller}/{action}/{id}");
             });
+
+
         }
     }
 }
