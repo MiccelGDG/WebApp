@@ -18,6 +18,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Courses.Models.ViewModels;
+using Courses.Models.ValueObjects;
+using Courses.Models.Enums;
 
 namespace Courses.Models.Services.Applications
 {
@@ -25,7 +28,28 @@ namespace Courses.Models.Services.Applications
     {
         public List<CoursesViewModel> GetServices()
         {
-            throw new NotImplementedException();
+            var courseList = new List<CoursesViewModel>();
+            Random rand = new Random();
+
+            for(int i = 0; i < 20; i++)
+            {
+                var price = Convert.ToDecimal(rand.NextDouble()* 10.0 + 10.0);
+                var course = new CoursesViewModel
+                {
+                    Id = Guid.NewGuid(),
+                    Title = $"Titolo {i}",
+                    Rating = rand.NextDouble() * 5.0,
+                    Author = "Nome Finto",
+                    CurrentPrice = new Money(Currency.EUR, price),
+                    FullPrice = new Money(Currency.EUR, rand.NextDouble() > 0.5 ? price : price -1),
+                    ImagePath = "~/images/logo.svg"
+                };
+
+                courseList.Add(course);   
+
+            }
+
+            return courseList;
         }
     }
 }
