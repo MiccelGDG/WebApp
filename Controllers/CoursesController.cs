@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Courses.Models.Services.Applications;
 
 namespace WebApp.Controllers
 {
@@ -10,6 +11,7 @@ namespace WebApp.Controllers
     {
         public IActionResult Index()
         {
+            var courseServices = new CourseServices();
             return View();
         }
 
