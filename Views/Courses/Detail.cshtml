@@ -3,8 +3,8 @@
         <div class="col-md-9">
             <h1>Titolo Corso</h1>
         </div>
-        <div class="col-md-3 d-flex align-items-end">
-            <a href="#" class="btn btn-warning btn-small">Iscriviti</a>
+        <div class="col-md-3  d-flex align-items-end">
+            <a href="#" class="btn btn-warning btn-lg btn-block register-button">Iscriviti</a>
         </div>
     </div>
     <div class="row">
@@ -26,13 +26,14 @@
 
                     <s>EUR 12.55</s>
                 </div>
+                <img src="~/images/logo.svg" class="img-fluid course-image" alt="Mio Corso">
             </aside>
         </div>
     </div>
 </section>
 <section class="course-lessons">
     <h2>Lezioni</h2>
-    @for(var i = 0; i < 10; i++){
+    @for(var i = 1; i <= 10; i++){
         <hr>
         <div class="row">
             <div class="col-md-9 d-flex align-items-center">
