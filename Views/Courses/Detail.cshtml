@@ -1,5 +1,56 @@
+<section class="course-info">
+    <div class="row">
+        <div class="col-md-9">
+            <h1>Titolo Corso</h1>
+        </div>
+        <div class="col-md-3 d-flex align-items-end">
+            <a href="#" class="btn btn-warning btn-small">Iscriviti</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9" html-sanitize>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur et perspiciatis nostrum aliquam temporibus repellendus numquam rem libero unde id, maxime similique, possimus nisi harum nihil iusto culpa eius? Sit!
+        </div>
+        <div class="col-md-3">
+            <aside>
+                <author>di Michele Maresca</author>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="price">
+                    EUR 13.55 <br/>
 
-    
-    <h1>Sono la pagina Detail di Courses</h1>
-
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae odit, corrupti nam laudantium aliquid possimus doloribus quidem est at magnam ullam facere dolor, adipisci repellendus esse eum alias omnis tempore!</p>
+                    <s>EUR 12.55</s>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+<section class="course-lessons">
+    <h2>Lezioni</h2>
+    @for(var i = 0; i < 10; i++){
+        <hr>
+        <div class="row">
+            <div class="col-md-9 d-flex align-items-center">
+                <a href="#">Titolo Lezione  @i</a>
+            </div>
+            <div class="col-md-3 d-flex align-items-center justify-content-end lesson-duration">
+                <i class="far fa-clock"></i><time>01m 50s</time>
+                
+            </div>
+	    </div>
+	}
+    <hr>
+    <div class="row course-duration">
+		<div class="col-md-9 d-flex align-items-center">
+            Totale
+        </div>
+        <div class="col-md-3 d-flex align-items-center justify-content-end">
+            <i class="far fa-clock"></i><time>18m 00s</time>
+        </div>
+    </div>
+</section>
